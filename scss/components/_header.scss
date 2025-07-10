@@ -1,0 +1,177 @@
+@use "../core" as *;
+
+.header {
+    height: var(--hd);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.3s linear;
+    background: $color-white;
+    z-index: 100;
+
+    &.actived {
+        height: 9rem;
+        box-shadow: 0 0 0.35rem rgba($color: #000000, $alpha: 0.35);
+
+        .custom-logo-link {
+            transform: scale(0.8);
+        }
+    }
+
+    @include max(1200px) {
+        box-shadow: 0 0 0.35rem rgba($color: #000000, $alpha: 0.35);
+    }
+
+   
+
+    &_wrap {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 var(--gap-48);
+
+        @include max(1460px) {
+            padding: 0 var(--gap-32);
+
+        }
+
+        @include max(1200px) {
+            padding: 0 1.6rem;
+
+        }
+    }
+
+  
+    &_nav {
+        height: 100%;
+    }
+
+    &_lf {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &_ct {}
+
+    &_rt {
+        display: flex;
+        column-gap: var(--gap-12);
+        align-items: center;
+
+        .btn {
+
+           
+        }
+    }
+
+    &_alert {
+        width: 2.4rem;
+        height: 2.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #707070;
+        cursor: pointer;
+        transition: 0.3s linear;
+        flex-shrink: 0;
+
+        i {
+            font-size: 1.8rem;
+
+            @include max(600px){
+                font-size: 2rem;
+            }
+        }
+
+
+        @include hover {
+            color: $color-four;
+            animation: phoneRing 1s linear infinite;
+        }
+    }
+
+    &_mobi {
+        width: 3.4rem;
+        height: 2.4rem;
+        position: relative;
+        display: none;
+        cursor: pointer;
+        margin: auto;
+
+        @media screen and (max-width: 1200px) {
+            display: block;
+        }
+
+        @media screen and (max-width: 600px) {
+            height: 2.2rem;
+            width: 3.2rem;
+        }
+
+        .line {
+            width: 100%;
+            display: block;
+            height: 0.3rem;
+            background: $color-pri;
+            transform: translateX(-50%);
+            border-radius: 100rem;
+            overflow: hidden;
+            position: absolute;
+
+            &:first-child {
+                top: 0;
+                left: 50%;
+                width: 100%;
+                transition: top 0.3s linear 0.5s, transform 0.3s linear 0s;
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+                left: 0;
+                width: 100%;
+                transform: translate(0%, -50%);
+                transition: opacity 0.1s ease 0.3s;
+            }
+
+            &:last-child {
+                width: 100%;
+                bottom: 0%;
+                left: 50%;
+                transition: bottom 0.3s linear 0.5s, transform 0.3s linear 0s;
+            }
+        }
+    }
+
+    &_ct {
+        @include max(1200px) {
+            display: none;
+        }
+    }
+
+    &_btns{
+        .btn{
+            padding: 1rem var(--gap-24);
+        }
+        transition: 0.3s linear;
+        @include max(600px) {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 100;
+            border-radius: 0;
+
+            .btn{
+               
+                width: 100%;
+            border-radius: 0;
+
+            }
+        }
+
+       
+    }
+
+    
+}

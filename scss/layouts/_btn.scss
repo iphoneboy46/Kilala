@@ -1,0 +1,137 @@
+@use "../core" as *; // Import toàn bộ mixin và biến
+.btn {
+    width: fit-content;
+    background: $color-pri2;
+    position: relative;
+    transition: all 0.3s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    padding: var(--gap-16) var(--gap-32);
+    overflow: hidden;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    
+    &::before {
+        content: "";
+        border-radius: inherit;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: $color-gra;
+        background-size: 100% 100%;
+        z-index: 1;
+        transition: 0.5s ease;
+    }
+    &.cl-2 {
+        background: linear-gradient(89deg, #0668eb 30.63%, #0f88fa 100%);
+    }
+    &.trans {
+        background: $color-pri;
+        border: 0.2rem solid $color-pri;
+        
+        height: auto;
+        &::before{
+            background: $color-white;
+        }
+
+        .btn-text{
+            color: $color-pri;
+        }
+        @include hover {
+            
+            .btn-text {
+                color: $color-white;
+            }
+        }
+
+        
+    }
+    &-ic {
+        width: 1.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        i {
+            font-size: 1.4rem;
+        }
+    }
+    &-text {
+        color: $color-white;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 1.5;
+        text-align: center;
+        white-space: nowrap;
+        transition: 0.3s linear;
+        position: relative;
+        z-index: 2;
+        @include fz-16;
+        @media screen and (max-width: 800px) {
+            font-size: 1.2rem;
+        }
+    }
+    @include hover {
+        box-shadow: rgba($color: $color-pri, $alpha: 0.25) 0px 2px 10px;
+        &::before {
+            width: 0;
+            left: 0;
+        }
+        .btn-text {
+            color: $color-pri;
+        }
+    }
+
+    &.arrow{
+        .btn-ic{
+            max-width: 3.2rem;
+            width: 100%;
+            height: auto;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        @include hover{
+            img{
+                filter: brightness(0) saturate(100%) invert(16%) sepia(93%) saturate(5762%) hue-rotate(327deg) brightness(79%) contrast(118%);
+            }
+        }
+    }
+
+    &.blur{
+        background: transparent;
+
+
+        &::before{
+            background: rgba($color: $color-white, $alpha: 0.5);
+            backdrop-filter: blur(1rem);
+        }
+
+        @include hover{
+            background: $color-pri;
+
+            .btn-text{
+                color: $color-white;
+            }
+        }
+
+        
+
+    }
+}
+

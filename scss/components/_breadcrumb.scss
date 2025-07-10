@@ -1,0 +1,78 @@
+@use "../core" as *;
+.breadcrumbs {
+    overflow: hidden;
+    &-wrap {
+        @include max(1201px) {
+            padding: 1rem 0;
+        }
+    }
+    &-list {
+        @include flex;
+        align-items: center;
+        margin: 0 1rem;
+    }
+    &-item {
+        position: relative;
+        padding: 0 1rem;
+        height: 2.4rem;
+        @include mid-flex;
+        &.current {
+            a {
+                color: white !important;
+                pointer-events: none;
+            }
+        }
+        &:last-child {
+            padding: 0 0.05rem;
+        }
+        &:not(:last-child) {
+            &::before {
+                position: absolute;
+                content: "/";
+                color: white;
+                width: 1.6rem;
+                height: 1.6rem;
+                top: 35%;
+                right: 0;
+                transform: translate(50%, -50%);
+            }
+        }
+        a {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            // color: white;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            letter-spacing: 0.005em;
+            // max-width: 9rem;
+            img {
+                width: 1.4rem;
+            }
+            @include min(1201px) {
+                &:hover {
+                    color: $color-pri;
+                }
+            }
+            @include max(600px) {
+                font-size: 1.2rem;
+            }
+        }
+        &.active {
+            a {
+                opacity: 1;
+                @include min(1201px) {
+                    &:hover {
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+        &:not(:last-child) {
+            a {
+                width: max-content;
+            }
+        }
+    }
+}

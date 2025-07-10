@@ -1,0 +1,42 @@
+// Core
+@use "./core" as *;
+// Component
+@use "./components/backtotop";
+@use "./components/aos";
+@use "./components/linksMain";
+@use "./components/header";
+@use "./components/footer";
+@use "./components/select2";
+@use "./components/popup";
+@use "./components/breadcrumb";
+@use "./components/menu";
+@use "./components/range";
+@use "./components/gallery";
+@use "./components/table";
+@use "./components/circletext";
+@use "./components/seeMore";
+// Layouts
+@use "./layouts/btn";
+@use "./layouts/pagi";
+@use "./layouts/component";
+@use "./layouts/text";
+@use "./layouts/distance";
+@use "./layouts/star";
+@use "./layouts/mxh";
+@use "./layouts/tab";
+@use "./layouts/form";
+@use "./layouts/count";
+@use "./layouts/ani";
+@use "./layouts/input";
+
+
+// Pages
+@use "./pages/home";
+// Library (CSS URLs giữ nguyên)
+@import url("../js/library/fontawesome/css/all.css");
+@import url("../js/library/aos/aos.css");
+@import url("../js/library/swiper/swiper-bundle.min.css");
+@import url("../js/library/splitting/splitting.css");
+@import url("../js/library/splitting/spliting-cells.css");
+
+

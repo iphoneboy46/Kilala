@@ -1,0 +1,80 @@
+@use "../core" as *;
+
+.links-main {
+    position: fixed;
+    bottom: 6dvh;
+    right: var(--gap-48);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 1002;
+    pointer-events: none;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    @include max(1200px){
+        right: 1.2rem;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: visible;
+    }
+
+    .btn-top.link-top {
+        cursor: pointer;
+        width: 6.4rem;
+        height: 6.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.4rem;
+        overflow: hidden;
+        border: 0.2rem solid $color-pri;
+        transition: 0.3s linear;
+        background: $color-white;
+        transform: rotate(45deg);
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        // border: 0.2rem solid $color-second;
+        @include max(1200px) {
+            width: 5.4rem;
+            height: 5.4rem;
+        }
+
+        @include max(800px) {
+            width: 4.4rem;
+            height: 4.4rem;
+        }
+
+        @include max(600px) {
+            width: 3.4rem;
+            height: 3.4rem;
+        }
+
+        // @include max(460px){
+        //     width: 2.4rem;
+        //     height: 2.4rem;
+        // }
+        @include hover {
+            transform: translateY(-5%)  rotate(45deg);
+            background: $color-pri;
+
+            i {
+                color: $color-white;
+            }
+        }
+
+        i {
+            
+            font-weight: 600;
+            color: $color-pri;
+            transform: rotate(-45deg);
+            transition: 0.3s linear;
+            @include fz-32;
+
+        }
+    }
+
+}

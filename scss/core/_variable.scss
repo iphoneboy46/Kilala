@@ -1,0 +1,126 @@
+@mixin max-width($value) {
+    @media screen and (max-width: $value) {
+        @content;
+    }
+}
+
+:root {
+    --font-pri: 'Inter 18pt';
+    --pd: 4rem;
+    --spd: 8rem;
+    --hd: 11.2rem;
+    --gap-08: 0.8rem;
+    --gap-12: 1.2rem;
+    --gap-16: 1.6rem;
+    --gap-24: 2.4rem;
+    --gap-32: 3.2rem;
+    --gap-36: 3.6rem;
+    --gap-40: 4rem;
+    --gap-42: 4.2rem;
+    --gap-48: 4.8rem;
+    --gap-60: 6rem;
+    --gap-64: 6.4rem;
+    --gap-80: 8rem;
+    --gap-100: 100rem;
+
+    @include max-width(1200px) {
+        --pd: 3rem;
+        --spd: 6rem;
+        --hd: 8rem;
+        --gap-12: 1rem;
+        --gap-16: 1.4rem;
+        --gap-24: 2rem;
+        --gap-32: 2.8rem;
+        --gap-36: 3rem;
+        --gap-40: 3rem;
+        --gap-42: 3.2rem;
+        --gap-48: 3.8rem;
+        --gap-60: 5rem;
+        --gap-64: 5.4rem;
+        --gap-80: 7rem;
+        --gap-100: 8rem;
+    }
+
+    @include max-width(800px) {
+        --pd: 2rem;
+        --spd: 4rem;
+        --hd: 8rem;
+        --gap-12: 0.8rem;
+        --gap-16: 1.2rem;
+        --gap-24: 1.6rem;
+        --gap-32: 2.4rem;
+        --gap-36: 2.6rem;
+        --gap-40: 2.6rem;
+        --gap-42: 2.8rem;
+        --gap-48: 3rem;
+        --gap-60: 4rem;
+        --gap-64: 4.4rem;
+        --gap-80: 6rem;
+        --gap-100: 7rem;
+    }
+
+    @include max-width(600px) {
+        --pd: 1.6rem;
+        --spd: 3.2rem;
+        --hd: 8rem;
+        --gap-12: 0.6rem;
+        --gap-16: 1rem;
+        --gap-24: 1.2rem;
+        --gap-32: 1.8rem;
+        --gap-36: 2.4rem;
+        --gap-40: 2rem;
+        --gap-42: 2.4rem;
+        --gap-48: 2.8rem;
+        --gap-60: 3rem;
+        --gap-64: 3.4rem;
+        --gap-80: 5rem;
+        --gap-100: 6rem;
+    }
+
+    @include max-width(460px) {
+        --pd: 1.6rem;
+        --spd: 3.2rem;
+        --hd: 8rem;
+        --gap-12: 0.6rem;
+        --gap-16: 1rem;
+        --gap-24: 1.2rem;
+        --gap-32: 1.4rem;
+        --gap-36: 2rem;
+        --gap-40: 1.8rem;
+        --gap-42: 2rem;
+        --gap-48: 2.4rem;
+        --gap-60: 2.8rem;
+        --gap-64: 3rem;
+        --gap-80: 4rem;
+        --gap-100: 5rem;
+    }
+}
+
+$color-pri: #D70051;
+$color-pri2: #FBE6EE;
+$color-second: #E0E6FF;
+$color-third: #5854D8;
+$color-four: #FFD220;
+$color-five: #88898a;
+$color-six: #a50a10;
+$color-black: #000000;
+$color-black-1: #1d1d1e;
+$color-gray-2-10: rgba(36, 25, 25, 0.1);
+$color-gray: #707070;
+$color-gray2: #65758B;
+$color-gray3: #64748B;
+$color-gray4: #71717A;
+$color-gray5: #667085;
+$color-gray6: #334155;
+$color-gray7: #F5F5F5;
+$color-gray8: #E5E7EB;
+$color-gray9: #6B7280;
+$color-text: #000000;
+$color-text2: #F2F3F2;
+$color-black-2: #222222;
+$color-black-3: #332525;
+$color-white: #ffffff; //Responsive
+$res-mobile: 1200px;
+$res-mobile-min: 1201px;
+$mobile: 500px;
+$color-gra: linear-gradient(105.13deg, #F3005B 10.5%, #CF004E 89.5%);

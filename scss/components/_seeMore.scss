@@ -1,0 +1,8 @@
+@use "../core" as *;
+.btn-exit-more {
+    display: none;
+}
+
+.parent-wrapper {
+    transition: all 0.5s linear;
+}
