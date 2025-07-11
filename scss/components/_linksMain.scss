@@ -36,8 +36,6 @@
         transition: 0.3s linear;
         background: $color-white;
         transform: rotate(45deg);
-        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-        // border: 0.2rem solid $color-second;
         @include max(1200px) {
             width: 5.4rem;
             height: 5.4rem;

@@ -1411,7 +1411,6 @@ form .btn {
   transition: 0.3s linear;
   background: #ffffff;
   transform: rotate(45deg);
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 @media screen and (max-width: 1200px) {
   .links-main .btn-top.link-top {
@@ -6790,6 +6789,7 @@ button[aria-label="Toggle autoplay"] {
   .home_slogan--font-list {
     animation: chuChay 20s linear infinite;
     overflow: visible;
+    transform: translateX(-100%);
   }
 }
 .home_slogan--font-item {
@@ -6800,7 +6800,7 @@ button[aria-label="Toggle autoplay"] {
 .home_slogan--font-item .note-text {
   white-space: nowrap;
 }
-.home_slogan--font-item::before {
+.home_slogan--font-item:not(:first-child)::before {
   content: "";
   width: 1.6rem;
   height: 1.6rem;
@@ -6811,21 +6811,21 @@ button[aria-label="Toggle autoplay"] {
   transform: translateY(-50%) rotate(45deg);
 }
 @media screen and (max-width: 1200px) {
-  .home_slogan--font-item::before {
+  .home_slogan--font-item:not(:first-child)::before {
     width: 1.4rem;
     height: 1.4rem;
     left: -0.7rem;
   }
 }
 @media screen and (max-width: 800px) {
-  .home_slogan--font-item::before {
+  .home_slogan--font-item:not(:first-child)::before {
     width: 1.2rem;
     height: 1.2rem;
     left: -0.6rem;
   }
 }
 @media screen and (max-width: 600px) {
-  .home_slogan--font-item::before {
+  .home_slogan--font-item:not(:first-child)::before {
     width: 1rem;
     height: 1rem;
     left: -0.5rem;
@@ -6858,6 +6858,7 @@ button[aria-label="Toggle autoplay"] {
   .home_slogan--back-list {
     animation: chuChay 20s linear reverse infinite;
     overflow: visible;
+    transform: translateX(-100%);
   }
 }
 .home_slogan--back-item {
@@ -6868,7 +6869,7 @@ button[aria-label="Toggle autoplay"] {
 .home_slogan--back-item .note-text {
   white-space: nowrap;
 }
-.home_slogan--back-item::before {
+.home_slogan--back-item:not(:first-child)::before {
   content: "";
   width: 1.6rem;
   height: 1.6rem;
@@ -6879,21 +6880,21 @@ button[aria-label="Toggle autoplay"] {
   transform: translateY(-50%) rotate(45deg);
 }
 @media screen and (max-width: 1200px) {
-  .home_slogan--back-item::before {
+  .home_slogan--back-item:not(:first-child)::before {
     width: 1.4rem;
     height: 1.4rem;
     left: -0.7rem;
   }
 }
 @media screen and (max-width: 800px) {
-  .home_slogan--back-item::before {
+  .home_slogan--back-item:not(:first-child)::before {
     width: 1.2rem;
     height: 1.2rem;
     left: -0.6rem;
   }
 }
 @media screen and (max-width: 600px) {
-  .home_slogan--back-item::before {
+  .home_slogan--back-item:not(:first-child)::before {
     width: 1rem;
     height: 1rem;
     left: -0.5rem;
@@ -6912,7 +6913,7 @@ button[aria-label="Toggle autoplay"] {
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
 }
 

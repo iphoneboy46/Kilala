@@ -364,7 +364,7 @@
     // overflow: hidden;
 
 
-    @include max(1200px){
+    @include max(1200px) {
         padding-bottom: 0;
     }
 
@@ -626,7 +626,7 @@
                     margin-top: var(--gap-100);
                 }
 
-                @include max(600px){
+                @include max(600px) {
                     margin-top: unset;
                 }
             }
@@ -715,6 +715,7 @@
             @include max(1200px) {
                 animation: chuChay 20s linear infinite;
                 overflow: visible;
+                transform: translateX(-100%);
             }
         }
 
@@ -727,34 +728,34 @@
                 white-space: nowrap;
             }
 
+            &:not(:first-child) {
+                &::before {
+                    content: "";
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background: $color-white;
+                    position: absolute;
+                    top: 50%;
+                    left: -0.8rem;
+                    transform: translateY(-50%) rotate(45deg);
 
-            &::before {
-                content: "";
-                width: 1.6rem;
-                height: 1.6rem;
-                background: $color-white;
-                position: absolute;
-                top: 50%;
-                left: -0.8rem;
-                transform: translateY(-50%) rotate(45deg);
+                    @include max(1200px) {
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        left: -0.7rem;
+                    }
 
-                @include max(1200px) {
-                    width: 1.4rem;
-                    height: 1.4rem;
-                    left: -0.7rem;
+                    @include max(800px) {
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        left: -0.6rem;
+                    }
 
-                }
-
-                @include max(800px) {
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    left: -0.6rem;
-                }
-
-                @include max(600px) {
-                    width: 1rem;
-                    height: 1rem;
-                    left: -0.5rem;
+                    @include max(600px) {
+                        width: 1rem;
+                        height: 1rem;
+                        left: -0.5rem;
+                    }
                 }
             }
 
@@ -786,6 +787,8 @@
             @include max(1200px) {
                 animation: chuChay 20s linear reverse infinite;
                 overflow: visible;
+                transform: translateX(-100%);
+
             }
 
         }
@@ -800,35 +803,40 @@
             }
 
 
-            &::before {
-                content: "";
-                width: 1.6rem;
-                height: 1.6rem;
-                background: $color-third;
-                position: absolute;
-                top: 50%;
-                left: -0.8rem;
-                transform: translateY(-50%) rotate(45deg);
+            &:not(:first-child) {
 
-                @include max(1200px) {
-                    width: 1.4rem;
-                    height: 1.4rem;
-                    left: -0.7rem;
+                &::before {
+                    content: "";
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    background: $color-third;
+                    position: absolute;
+                    top: 50%;
+                    left: -0.8rem;
+                    transform: translateY(-50%) rotate(45deg);
 
-                }
+                    @include max(1200px) {
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        left: -0.7rem;
 
-                @include max(800px) {
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    left: -0.6rem;
-                }
+                    }
 
-                @include max(600px) {
-                    width: 1rem;
-                    height: 1rem;
-                    left: -0.5rem;
+                    @include max(800px) {
+                        width: 1.2rem;
+                        height: 1.2rem;
+                        left: -0.6rem;
+                    }
+
+                    @include max(600px) {
+                        width: 1rem;
+                        height: 1rem;
+                        left: -0.5rem;
+                    }
                 }
             }
+
+
 
         }
 
@@ -846,7 +854,7 @@
         }
 
         100% {
-            transform: translateX(100%);
+            transform: translateX(0%);
         }
     }
 
@@ -1775,7 +1783,7 @@
                     }
                 }
 
-                .home_blog--link-wrap{
+                .home_blog--link-wrap {
                     position: absolute;
                 }
             }
@@ -1988,11 +1996,11 @@
                 background: $color-white;
                 padding-right: 14rem;
 
-                @include max(800px){
+                @include max(800px) {
                     padding-right: 10rem;
                 }
 
-                @include max(600px){
+                @include max(600px) {
                     padding-right: 9rem;
                 }
             }
