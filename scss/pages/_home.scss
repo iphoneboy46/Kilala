@@ -1304,6 +1304,12 @@
 
             }
 
+            .swiper-slide-prev{
+                @include max(1600px){
+                    pointer-events: visible;
+                }
+            }
+
 
         }
 

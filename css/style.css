@@ -7261,6 +7261,11 @@ button[aria-label="Toggle autoplay"] {
 .home_feature--slide-list .swiper-slide-next + .swiper-slide + .swiper-slide {
   pointer-events: visible;
 }
+@media screen and (max-width: 1600px) {
+  .home_feature--slide-list .swiper-slide-prev {
+    pointer-events: visible;
+  }
+}
 .home_feature--slide-item-bg {
   padding-top: 134.0482573727%;
   position: relative;
