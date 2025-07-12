@@ -527,8 +527,7 @@
 
 
             &:first-child {
-                max-width: 30.1rem;
-                width: 100%;
+                width: calc((30.1rem / 60.3rem) * 100%);
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -550,25 +549,16 @@
                     padding-top: 100%;
                 }
 
-                @include max(1200px) {
-                    max-width: 25.1rem;
-                }
-
                 @include max(1024px) {
-                    max-width: 20.1rem;
                     padding: 1.5rem;
 
-                }
-
-                @include max(900px) {
-                    max-width: 18.1rem;
                 }
 
 
                 @include max(800px) {
                     max-width: unset;
                     height: 100%;
-
+                    width: 100%;
                     position: relative;
                     top: unset;
                     left: unset;
@@ -577,8 +567,7 @@
             }
 
             &:last-child {
-                max-width: 40.1rem;
-                width: 100%;
+                width: calc((40.1rem / 60.3rem) * 100%);
                 position: absolute;
                 top: 0;
                 right: 1rem;
@@ -603,20 +592,11 @@
                     padding-top: calc(100% * 476 / 401);
                 }
 
-                @include max(1200px) {
-                    max-width: 35.1rem;
-                }
-
-                @include max(1024px) {
-                    max-width: 30.1rem;
-                }
-
-                @include max(900px) {
-                    max-width: 28.1rem;
-                }
+                
 
 
                 @include max(800px) {
+                    width: 100%;
                     max-width: unset;
                     position: relative;
                     top: unset;
