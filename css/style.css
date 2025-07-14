@@ -447,7 +447,7 @@ iframe {
   left: 105%;
   width: 4.167vw;
   height: 0.208vw;
-  background-image: url(../../assets/images/titleTTRt.png);
+  background-image: url(../assets/images/titleTTRt.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -463,7 +463,7 @@ iframe {
   right: 105%;
   width: 4.167vw;
   height: 0.208vh;
-  background-image: url(../../assets/images/titleTTLf.png);
+  background-image: url(../assets/images/titleTTLf.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -7544,7 +7544,7 @@ button[aria-label="Toggle autoplay"] {
   content: "";
   width: 3.8rem;
   height: 1.2rem;
-  background-image: url(../../assets/images/ArrowBtn.png);
+  background-image: url(../assets/images/ArrowBtn.png);
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
